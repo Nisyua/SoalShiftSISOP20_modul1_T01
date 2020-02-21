@@ -31,10 +31,7 @@ Jawaban :
 - `For(key in arr) print key arr[key]` = digunakan untuk menampilkan seluruh array. Format : Key-isi array. Missal = Central 3000
 - `Sort -g -k 2| head -1` = sort menggunakan `-g` karena profit bertipe data (float) dengan `-k 2` kolom ke 2 (profit) dan nemapilkan hanya 1 output saja
 
-``` 
-nisyua@nisyua:~/Soal.1$ bash soal1a.sh
-Central 39706.4
-```
+An image: ![Alt](soal1a.png)
 
 
 #### 1b. 
