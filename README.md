@@ -49,7 +49,13 @@ HINT: enkripsi yang digunakan adalah caesar cipher.
 
 *Gunakan Bash Script
 
-#### 2a b.
+#### 2a b
 
-`#!/bin/bash
-head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $1.txt`
+``#!/bin/bash
+head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $1.txt``
+
+ ***urandom*** untuk menghasilkan password acak, dengan batasan hanya berupa alphanumeric menggunakan fungsi tr -cd, lalu ambil 28 karakter saja dengan `head -c 28` 
+ 
+***A-Za-z0-9*** artinya ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+***-dc*** yaitu delete complement
+***-dc A-Za-z0-9*** untuk menghapus semua huruf yang tidak termasuk dari ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789. maka dari itu, karakter-karakter aneh dari `/dev/urandom` nanti akan dihapus oleh `tr -dc`
