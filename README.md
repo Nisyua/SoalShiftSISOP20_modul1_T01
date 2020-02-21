@@ -73,8 +73,7 @@ Setelah itu buka file `soal2.txt` maka akan mendapat passwordnya.
 
 **2b** 
 
-``#!/bin/bash
+``#!/bin/bash``
 
-judul=$(echo $1 | tr -dc A-Z-z)
-
-head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $judul.txt``
+`judul=$(echo $1 | tr -dc A-Z-z)
+head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $judul.txt`
