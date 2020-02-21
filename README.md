@@ -7,12 +7,15 @@
 
 # Nomor 1
 
-Whits adalah seorang mahasiswa teknik informatika. Dia mendapatkan tugas praktikum
-untuk membuat laporan berdasarkan data yang ada pada file “Sample-Superstore.tsv”.
-Namun dia tidak dapat menyelesaikan tugas tersebut. Laporan yang diminta berupa :
+Whits adalah seorang mahasiswa teknik informatika. Dia mendapatkan tugas praktikum untuk membuat laporan berdasarkan data yang ada pada file “Sample-Superstore.tsv”. Namun dia tidak dapat menyelesaikan tugas tersebut. Laporan yang diminta berupa :
 
-a) Tentukan wilayah bagian (region) dengan keuntungan (profit) yang paling sedikit dari file Sample-Superstore.csv
+    1. Tentukan wilayah bagian (region) mana yang memiliki keuntungan (profit) paling sedikit
+    2. Tampilkan 2 negara bagian (state) yang memiliki keuntungan (profit) paling sedikit berdasarkan hasil poin a
+    3. Tampilkan 10 produk (product name) yang memiliki keuntungan (profit) paling sedikit berdasarkan 2 negara bagian (state) hasil poin b
 
+Whits memohon kepada kalian yang sudah jago mengolah data untuk mengerjakan laporan tersebut.
+
+*Gunakan Awk dan Command pendukung
 Jawaban : 
 
 `awk -F "," 'NR > 1 {arr[$13] = arr[$13] + $NF}; END {for(key in arr)print key,arr[key]}' Sample-Superstore.csv | sort -g | head -1`
