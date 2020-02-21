@@ -51,11 +51,24 @@ HINT: enkripsi yang digunakan adalah caesar cipher.
 
 #### 2a b
 
+1. `nano soal2a.sh`
+
 ``#!/bin/bash
 head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $1.txt``
 
- ***urandom*** untuk menghasilkan password acak, dengan batasan hanya berupa alphanumeric menggunakan fungsi tr -cd, lalu ambil 28 karakter saja dengan `head -c 28` 
+ `urandom` untuk menghasilkan password acak, dengan batasan hanya berupa alphanumeric menggunakan fungsi tr -cd, lalu ambil 28 karakter saja dengan `head -c 28` 
  
-***A-Za-z0-9*** artinya ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
-***-dc*** yaitu delete complement
-***-dc A-Za-z0-9*** untuk menghapus semua huruf yang tidak termasuk dari ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789. maka dari itu, karakter-karakter aneh dari `/dev/urandom` nanti akan dihapus oleh `tr -dc`
+``A-Za-z0-9`` artinya ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+``-dc`` yaitu delete complement
+``-dc A-Za-z0-9`` untuk menghapus semua huruf yang tidak termasuk dari ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789. maka dari itu, karakter-karakter aneh dari `/dev/urandom` nanti akan dihapus oleh `tr -dc`
+``>$1.txt`` untuk menyimpan data ini ke dalam ***$1.txt***
+
+Lalu ketik jalankan file bash tersebut ``bash soal2a.sh``setelah itu inputkan argumen ``bash soal2a.sh soal2``
+
+`soal2 ` yaitu argumen yang diinputkan. 
+Setelah itu buka file `soal2.txt` maka akan mendapat passwordnya. 
+
+**2b** 
+#!/bin/bash
+judul=$(echo $1 | tr -dc A-Z-z)
+head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $judul.txt
