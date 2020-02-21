@@ -25,14 +25,17 @@ Jawaban :
 - `Array[key]` = untuk setiap elemen direpresentikan dlm variabel key di dlm array
 - line awk dengan pemisah yaitu tab ("\t").
 - `NR > 1` = hanya memproses baris nomor 2 dan seterusnya, baris pertama diskip karena hanya berisi header table
-- `Arr[$13]` = arr[$13] += [$nf] = kode program ini dijalanin pada tiap baris di file .csv
-Missal => 13 : Central ; 21 : 1000
-Jadi, misalnya `Arr[Central;] = arr[central] += 1000` . Berfungsi untuk menghitung total profit tiap region
+- `Arr[$13] = arr[$13] += [$NF]` = Berfungsi untuk menghitung total profit tiap region. Kebetulan kolom profit adalah yang terakhir maka dapat menggunakan `$NF`
 - `END{}` = kode ini dijalankan sekali saat di akhir saja
 - `For(key in arr) print key arr[key]` = digunakan untuk menampilkan seluruh array. Format : Key-isi array. Missal = Central 3000
-- `Sort -g -k 2| head -1` = sort berdasar general numeric (float) dengan kolom ke 2 (profit) dan tampilkan hanya 1 output
+- `Sort -g -k 2| head -1` = sort menggunakan `-g` karena profit bertipe data (float) dengan `-k 2` kolom ke 2 (profit) dan nemapilkan hanya 1 output saja
 
 #### 1b. 
 
     `awk -F "t\" 'NR>1 {if($13~"Central")arr[$11]+=NF};END {for(key in arr)print key,arr[key]}' Sample-Superstore.tsv | sort -nk 2 | head -n 2
-- Logika yang digunakan sama dengan soal 1a, hanya menambahkan `{if($13~"Central")arr[$11]+=NF}` dengan logika jika tab 13 adalah Central, maka jumlahkan profit dengan tiap state . 
+- Logika yang digunakan sama dengan soal 1a, hanya menambahkan `{if($13~"Central")arr[$11]+=NF}` dengan logika jika kolom 13 adalah Central, maka jumlahkan profit dengan tiap state .
+    `head -n 2` hanya membutuhkan 2 output saja. 
+    
+### 1c. 
+
+
