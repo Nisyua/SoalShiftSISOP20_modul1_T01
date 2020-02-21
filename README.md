@@ -18,7 +18,7 @@ Whits memohon kepada kalian yang sudah jago mengolah data untuk mengerjakan lapo
 *Gunakan Awk dan Command pendukung
 Jawaban : 
 
-      `awk -F "," 'NR > 1 {arr[$13] = arr[$13] + $NF}; END {for(key in arr)print key,arr[key]}' Sample-Superstore.csv | sort -g | head -1`
+      `awk -F "," 'NR > 1 {arr[$13] = arr[$13] + $NF}; END {for(key in arr)print key,arr[key]}' Sample-Superstore.csv | sort -g -k 2 | head -1`
 
 - `Array[key]` = untuk setiap elemen direpresentikan dlm variabel key di dlm array
 
@@ -34,6 +34,7 @@ Jadi, misalnya `Arr[Central;] = arr[central] += 1000` . Berfungsi untuk menghitu
 
 - `For(key in arr) print key arr[key]` = digunakan untuk menampilkan seluruh array. Format : Key-isi array. Missal = Central 3000
 
-- `Sort -g | head -1` = sort berdasar general numeric dan tampilkan hanya 1 output , region beserta profit terkecil nya.
+- `Sort -g -k 2| head -1` = sort berdasar general numeric dengan kolom ke 2 (profit) dan tampilkan hanya 1 output , region beserta profit terkecil nya.
 
 
+1b. 
