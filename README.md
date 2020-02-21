@@ -92,3 +92,43 @@ menjalankan script download gambar tersebut. Namun, script download tersebut han
 Hint : Gunakan wget.log untuk membuat location.log yang isinya merupakan hasil dari grep "Location".
 
 *Gunakan Bash, Awk dan Crontab
+
+**a** 
+```bash
+#!/bin/bash
+for i in {1..28}
+do
+  wget "https://loremflickr.com/320/240/cat" -O pdkt_kusuma_$i -a wget.log
+done
+```
+`for i in {1..28}` untuk i = 1 sampai 28. setelah itu download gambar dengan menggunakan command `wget` .
+`O` output dari gambarnya . 
+`-a` menambahkan file ke logfile daripada ditimpa dengan file yang lama
+
+**b**
+
+# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+# 
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').# 
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+# 
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
+5 6-23/8 * * 0-5 /bin/bash /home/nisyua/soal.3/soal3a.sh
+
+penulisan crontab untuk setiap 8 jam dimulai dari jam 6.05 setiap hari kecuali hari Sabtu dan menjalankan file yang ada di /home/nisyua/soal.3/soal3a.sh
