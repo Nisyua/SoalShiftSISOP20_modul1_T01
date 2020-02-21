@@ -21,7 +21,7 @@ Jawaban :
 
 #### 1a. 
 
-      `awk -F "\t" 'NR > 1 {arr[$13] = arr[$13] + $NF}; END {for(key in arr)print key,arr[key]}' Sample-Superstore.tsv | sort -g -k 2 | head -1`
+      `awk -F "\t" 'NR > 1 {arr[$13] = arr[$13] + $NF}; END {for(key in arr)print key,arr[key]}' Sample-Superstore.tsv | sort -g -k 2 | head -n 1`
 
 - `Array[key]` = untuk setiap elemen direpresentikan dlm variabel key di dlm array
 - line awk dengan pemisah yaitu tab `"\t"` .
@@ -132,6 +132,6 @@ done
 `-a` menambahkan file ke logfile daripada ditimpa dengan file yang lama
 
 **b**
-crontab [link](https://github.com/anissaidatur/SoalShiftSISOP20_modul1_T01/blob/master/crontab.txt)
+[Crootab](https://github.com/anissaidatur/SoalShiftSISOP20_modul1_T01/blob/master/crontab.txt)
 
 penulisan crontab untuk setiap 8 jam dimulai dari jam 6.05 setiap hari kecuali hari Sabtu dan menjalankan file yang ada di /home/nisyua/soal.3/soal3a.sh
