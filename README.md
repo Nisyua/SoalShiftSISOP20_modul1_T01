@@ -55,9 +55,10 @@ Pertama membuat file .
 `nano coba2a.sh`
 
 **file coba2a.sh**
-
-``#!/bin/bash
-head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $1.txt``
+```bash
+#!/bin/bash
+head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $1.txt
+``
 
  `urandom` untuk menghasilkan password acak, dengan batasan hanya berupa alphanumeric menggunakan fungsi tr -cd, lalu ambil 28 karakter saja dengan `head -c 28` 
  
@@ -72,7 +73,8 @@ Lalu ketik jalankan file bash tersebut ``bash soal2a.sh`` setelah itu inputkan a
 Setelah itu buka file `soal2.txt` maka akan mendapat passwordnya. 
 
 **2b** 
-
-`#!/bin/bash
+```bash
+#!/bin/bash
 judul=$(echo$1 | tr -dc A-Z-z)
-head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $judul.txt`
+head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $judul.txt
+```
