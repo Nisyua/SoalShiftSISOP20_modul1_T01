@@ -73,12 +73,16 @@ Lalu ketik jalankan file bash tersebut ``bash soal2a.sh`` setelah itu inputkan a
 Setelah itu buka file `soal2.txt` maka akan mendapat passwordnya. 
 
 **2b** 
+
+membuat file baru lagi yang hanya beda pada **$judul** nya 
 ```bash
 #!/bin/bash
 judul=$(echo$1 | tr -dc A-Za-z)
 head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $judul.txt
 ```
-menyaring judul hanya dengan alphabet
+Program tersebut berfungsi menyaring judul hanya dengan alphabet. Ketika menjalankan program tersebut, perlu diberi tambahan argumen. jadi 
+``bash coba2b.sh iniargumen123`` , maka otomats akan muncul sebuah file txt berupa iniargumen.txt dimana akan menyaring numericnya dan menyisakan alphabet saja.
+
 # Nomor 3
 
 1 tahun telah berlalu sejak pencampakan hati Kusuma. Akankah sang pujaan hati kembali ke naungan Kusuma? Memang tiada maaf bagi Elen. Tapi apa daya hati yang sudah hancur, Kusuma masih terguncang akan sikap Elen. Melihat kesedihan Kusuma, kalian mencoba menghibur Kusuma dengan mengirimkan gambar kucing. [a] Maka dari itu, kalian mencoba membuat script untuk mendownload 28 gambar dari "https://loremflickr.com/320/240/cat" menggunakan command wget dan menyimpan file dengan nama "pdkt_kusuma_NO" (contoh: pdkt_kusuma_1, pdkt_kusuma_2, pdkt_kusuma_3) serta jangan lupa untuk menyimpan log messages wget kedalam sebuah file "wget.log". Karena kalian gak suka ribet, kalian membuat penjadwalan untuk
