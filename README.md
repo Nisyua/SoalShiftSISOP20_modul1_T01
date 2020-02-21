@@ -42,3 +42,5 @@ Jawaban :
 - Logika yang digunakan sama persis dengan soal 1b, yang berbeda hanya kita akan print 10, sehingga `head -n 10` dan akan ada dua output yaitu nama produk($1) dan value produk($2).
   
 # Nomor 2
+
+#### 2a b. 
