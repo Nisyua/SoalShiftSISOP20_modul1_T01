@@ -30,7 +30,7 @@ Jawaban :
 - `END{}` = kode ini dijalankan sekali saat di akhir saja
 - `For(key in arr) print key arr[key]` = digunakan untuk menampilkan seluruh array. Format : Key-isi array. Missal = Central 3000
 - `Sort -g -k 2| head -1` = sort menggunakan `-g` karena profit bertipe data (float) dengan `-k 2` kolom ke 2 (profit) dan nemapilkan hanya 1 output saja
-
+![](img/soal1a.png)
 
 #### 1b. 
 
