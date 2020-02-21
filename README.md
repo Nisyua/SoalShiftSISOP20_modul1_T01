@@ -106,6 +106,6 @@ done
 `-a` menambahkan file ke logfile daripada ditimpa dengan file yang lama
 
 **b**
-crontab [link](https://github.com/anissaidatur/SoalShiftSISOP20_modul1_T01/blob/master/crontab.txt
+crontab [link](https://github.com/anissaidatur/SoalShiftSISOP20_modul1_T01/blob/master/crontab.txt)
 
 penulisan crontab untuk setiap 8 jam dimulai dari jam 6.05 setiap hari kecuali hari Sabtu dan menjalankan file yang ada di /home/nisyua/soal.3/soal3a.sh
