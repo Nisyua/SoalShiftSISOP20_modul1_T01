@@ -18,7 +18,7 @@ Whits memohon kepada kalian yang sudah jago mengolah data untuk mengerjakan lapo
 *Gunakan Awk dan Command pendukung
 Jawaban : 
 
-`awk -F "," 'NR > 1 {arr[$13] = arr[$13] + $NF}; END {for(key in arr)print key,arr[key]}' Sample-Superstore.csv | sort -g | head -1`
+      `awk -F "," 'NR > 1 {arr[$13] = arr[$13] + $NF}; END {for(key in arr)print key,arr[key]}' Sample-Superstore.csv | sort -g | head -1`
 
 - `Array[key]` = untuk setiap elemen direpresentikan dlm variabel key di dlm array
 
