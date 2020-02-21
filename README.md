@@ -58,7 +58,7 @@ Pertama membuat file .
 ```bash
 #!/bin/bash
 head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $1.txt
-``
+```
 
  `urandom` untuk menghasilkan password acak, dengan batasan hanya berupa alphanumeric menggunakan fungsi tr -cd, lalu ambil 28 karakter saja dengan `head -c 28` 
  
