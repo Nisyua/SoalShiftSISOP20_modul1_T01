@@ -5,6 +5,7 @@
 - Anis Saidatur Rochma [05311840000002]
 - Kadek Nesya Kurniadewi [05311840000009]
 
+
 # Nomor 1
 
 Whits adalah seorang mahasiswa teknik informatika. Dia mendapatkan tugas praktikum untuk membuat laporan berdasarkan data yang ada pada file “Sample-Superstore.tsv”. Namun dia tidak dapat menyelesaikan tugas tersebut. Laporan yang diminta berupa :
@@ -30,16 +31,41 @@ Jawaban :
 - `For(key in arr) print key arr[key]` = digunakan untuk menampilkan seluruh array. Format : Key-isi array. Missal = Central 3000
 - `Sort -g -k 2| head -1` = sort menggunakan `-g` karena profit bertipe data (float) dengan `-k 2` kolom ke 2 (profit) dan nemapilkan hanya 1 output saja
 
+``` 
+nisyua@nisyua:~/Soal.1$ bash soal1a.sh
+Central 39706.4
+```
+
+
 #### 1b. 
 
     `awk -F "t\" 'NR>1 {if($13~"Central")arr[$11]+=NF};END {for(key in arr)print key,arr[key]}' Sample-Superstore.tsv | sort -nk 2 | head -n 2
 - Logika yang digunakan sama dengan soal 1a, hanya menambahkan `{if($13~"Central")arr[$11]+=NF}` dengan logika jika kolom 13 adalah Central, maka jumlahkan profit dengan tiap state .
     `head -n 2` hanya membutuhkan 2 output saja. 
+```
+nisyua@nisyua:~/Soal.1$ bash soal1a.sh
+Texas -25729.4
+Illinois -12607.9
+```
     
 ### 1c. 
     `awk -F "\t" 'NR>1 {if($11~"Texas ||$11~Illinois")arr[$17]+=NF};END{for(key in arr)print arr[key]` Sample-Superstore.tsv | sort -g | head -n 10
 - Karena ada dua state, maka mencari 10 yang paling rendah profitnya dari gabungan kedua state.
 - Logika yang digunakan sama persis dengan soal 1b, yang berbeda hanya kita akan print 10, sehingga `head -n 10` dan akan ada dua output yaitu nama produk($1) dan value produk($2).
+```
+nisyua@nisyua:~/Soal.1$ bash soal1a.sh
+---10 Product name yang memiliki profit paling sedikit dari 2 State.. ---
+-5552.84 GBC DocuBind P400 Electric Binding System
+-3431.67 Fellowes PB500 Electric Punch Plastic Comb Binding Machine with Manual Bind
+-2929.48 Ibico EPK-21 Electric Binding System
+-1869.99 Lexmark MX611dhe Monochrome Laser Printer
+-1601.2 Ibico Hi-Tech Manual Binding System
+-1480.03 GBC DocuBind TL300 Electric Binding System
+-1378.82 3.6 Cubic Foot Counter Height Office Refrigerator
+-1181.28 Hoover Upright Vacuum With Dirt Cup
+-1147.01 GBC ProClick 150 Presentation Binding System
+-1141.47 GBC Ibimaster 500 Manual ProClick Binding System
+```
   
 # Nomor 2
 
