@@ -93,9 +93,9 @@ head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $1.txt
 ``-dc A-Za-z0-9`` untuk menghapus semua huruf yang tidak termasuk dari ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789. maka dari itu, karakter-karakter aneh dari `/dev/urandom` nanti akan dihapus oleh `tr -dc`
 ``>$1.txt`` untuk menyimpan data ini ke dalam **$1.txt**
 
-Lalu ketik jalankan file bash tersebut ``bash soal2a.sh`` setelah itu inputkan argumen ``bash soal2a.sh soal2``
+Lalu ketik jalankan file bash tersebut ``bash coba2a.sh`` setelah itu inputkan argumen ``bash soal2a.sh soal2``
 
-`soal2 ` yaitu argumen yang diinputkan. 
+`soal2 `= argumen yang diinputkan. 
 Setelah itu buka file `soal2.txt` maka akan mendapat passwordnya. 
 
 **2b** 
