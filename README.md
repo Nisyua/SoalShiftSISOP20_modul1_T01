@@ -51,7 +51,10 @@ HINT: enkripsi yang digunakan adalah caesar cipher.
 
 #### 2a b
 
-1. `nano soal2a.sh`
+1. 
+`nano soal2a.sh`
+
+**file soal3a.sh**
 
 ``#!/bin/bash
 head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $1.txt``
