@@ -20,7 +20,7 @@ Jawaban :
 
 #### 1a. 
 
-      `awk -F "," 'NR > 1 {arr[$13] = arr[$13] + $NF}; END {for(key in arr)print key,arr[key]}' Sample-Superstore.csv | sort -g -k 2 | head -1`
+      `awk -F "," 'NR > 1 {arr[$13] = arr[$13] + $NF}; END {for(key in arr)print key,arr[key]}' Sample-Superstore.tsv | sort -g -k 2 | head -1`
 
 - `Array[key]` = untuk setiap elemen direpresentikan dlm variabel key di dlm array
 
@@ -38,4 +38,7 @@ Jadi, misalnya `Arr[Central;] = arr[central] += 1000` . Berfungsi untuk menghitu
 
 - `Sort -g -k 2| head -1` = sort berdasar general numeric dengan kolom ke 2 (profit) dan tampilkan hanya 1 output , region beserta profit terkecil nya.
 
-### 1b. 
+#### 1b. 
+
+    `awk -F "t\" 'NR>1 {if($13~"Central")arr[$11]+=NF};END {for(key in arr)print key,arr[key]}' Sample-Superstore.tsv | sort -nk 2 | head -n 2
+    
