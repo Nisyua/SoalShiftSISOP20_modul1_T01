@@ -1,9 +1,9 @@
 # SoalShiftSISOP20_modul1_T01
 
-Nama Anggota
+## Nama Anggota
 
 - Anis Saidatur Rochma [05311840000002]
-- Kadek Nesya Kurniadewi [0531184000000
+- Kadek Nesya Kurniadewi [05311840000009]
 
 # Nomor 1
 
