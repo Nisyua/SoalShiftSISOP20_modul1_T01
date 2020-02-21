@@ -75,9 +75,10 @@ Setelah itu buka file `soal2.txt` maka akan mendapat passwordnya.
 **2b** 
 ```bash
 #!/bin/bash
-judul=$(echo$1 | tr -dc A-Z-z)
+judul=$(echo$1 | tr -dc A-Za-z)
 head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $judul.txt
 ```
+menyaring judul hanya dengan alphabet
 # Nomor 3
 
 1 tahun telah berlalu sejak pencampakan hati Kusuma. Akankah sang pujaan hati kembali ke naungan Kusuma? Memang tiada maaf bagi Elen. Tapi apa daya hati yang sudah hancur, Kusuma masih terguncang akan sikap Elen. Melihat kesedihan Kusuma, kalian mencoba menghibur Kusuma dengan mengirimkan gambar kucing. [a] Maka dari itu, kalian mencoba membuat script untuk mendownload 28 gambar dari "https://loremflickr.com/320/240/cat" menggunakan command wget dan menyimpan file dengan nama "pdkt_kusuma_NO" (contoh: pdkt_kusuma_1, pdkt_kusuma_2, pdkt_kusuma_3) serta jangan lupa untuk menyimpan log messages wget kedalam sebuah file "wget.log". Karena kalian gak suka ribet, kalian membuat penjadwalan untuk
