@@ -20,10 +20,10 @@ Jawaban :
 
 #### 1a. 
 
-      `awk -F "," 'NR > 1 {arr[$13] = arr[$13] + $NF}; END {for(key in arr)print key,arr[key]}' Sample-Superstore.tsv | sort -g -k 2 | head -1`
+      `awk -F "\t" 'NR > 1 {arr[$13] = arr[$13] + $NF}; END {for(key in arr)print key,arr[key]}' Sample-Superstore.tsv | sort -g -k 2 | head -1`
 
 - `Array[key]` = untuk setiap elemen direpresentikan dlm variabel key di dlm array
-- line awk dengan pemisah yaitu tab ("\t").
+- line awk dengan pemisah yaitu tab `"\t"` .
 - `NR > 1` = hanya memproses baris nomor 2 dan seterusnya, baris pertama diskip karena hanya berisi header table
 - `Arr[$13] = arr[$13] += [$NF]` = Berfungsi untuk menghitung total profit tiap region. Kebetulan kolom profit adalah yang terakhir maka dapat menggunakan `$NF`
 - `END{}` = kode ini dijalankan sekali saat di akhir saja
@@ -37,5 +37,8 @@ Jawaban :
     `head -n 2` hanya membutuhkan 2 output saja. 
     
 ### 1c. 
-
-
+    `awk -F "\t" 'NR>1 {if($11~"Texas ||$11~Illinois")arr[$17]+=NF};END{for(key in arr)print arr[key]` Sample-Superstore.tsv | sort -g | headh -n 10
+- Karena ada dua state, maka mencari 10 yang paling rendah profitnya dari gabungan kedua state.
+- Logika yang digunakan sama persis dengan soal 1b, yang berbeda hanya kita akan print 10, sehingga `head -n 10` dan akan ada dua output yaitu nama produk($1) dan value produk($2).
+  
+# Nomor 2
