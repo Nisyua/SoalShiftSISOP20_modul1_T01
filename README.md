@@ -2,8 +2,8 @@
 
 Nama Anggota
 
-    Anis Saidatur Rochma [05311840000002]
-    Kadek Nesya Kurniadewi [0531184000000
+- Anis Saidatur Rochma [05311840000002]
+- Kadek Nesya Kurniadewi [0531184000000
 
 # Nomor 1
 
