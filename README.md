@@ -65,7 +65,7 @@ head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $1.txt
 ``A-Za-z0-9`` artinya ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
 ``-dc`` yaitu delete complement
 ``-dc A-Za-z0-9`` untuk menghapus semua huruf yang tidak termasuk dari ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789. maka dari itu, karakter-karakter aneh dari `/dev/urandom` nanti akan dihapus oleh `tr -dc`
-``>$1.txt`` untuk menyimpan data ini ke dalam ***$1.txt***
+``>$1.txt`` untuk menyimpan data ini ke dalam **$1.txt**
 
 Lalu ketik jalankan file bash tersebut ``bash soal2a.sh`` setelah itu inputkan argumen ``bash soal2a.sh soal2``
 
