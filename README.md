@@ -49,7 +49,7 @@ Illinois -12607.9
 ```
     
 ### 1c. 
-    `awk -F "\t" 'NR>1 {if($11~"Texas ||$11~Illinois")arr[$17]+=NF};END{for(key in arr)print arr[key]` Sample-Superstore.tsv | sort -g | head -n 10
+    `awk -F "\t" 'NR>1{if($11~"Texas"||$11~"Illinois")arr[$17]+=$NF}END{for(key in arr)print arr[key],key}' Sample-Superstore.tsv | sort -g | head -n 10
 - Karena ada dua state, maka mencari 10 yang paling rendah profitnya dari gabungan kedua state.
 - Logika yang digunakan sama persis dengan soal 1b, yang berbeda hanya kita akan print 10, sehingga `head -n 10` dan akan ada dua output yaitu nama produk($1) dan value produk($2).
 ```
