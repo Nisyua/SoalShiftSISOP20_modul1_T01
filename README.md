@@ -127,7 +127,7 @@ mv $fileName $stringName.txt
 ```
 Program diatas berfungsi untuk mengubah nama file yang dipanggil saat dijalankan dengan cara ``bash soal2_enkripsi.sh iniargumen.txt``
 - ``varHour=`date +"%H"`` adalah perintah untuk mendapatkan nilai jam pada pembuatan file yang nantinya akan dipanggil untuk proses enkripsi
-``smallA=$(echo {a..z} | sed -r 's/ //g';)
+```smallA=$(echo {a..z} | sed -r 's/ //g';)
 bigA=$(echo {A..Z} | sed -r 's/ //g';)
 cypherSmall=`echo $smallA | sed -r "s/^.{$varHour}//g";echo $smallA | sed -r "s/.{$( expr 26 - $varHour )}$//g"`
 cypherSmall=`echo $cypherSmall | sed "s/ //g"`
@@ -137,7 +137,7 @@ echo -e $smallA \n $bigA \n $cypherSmall \n $cypherSmall \n $cypherBig \n $cyphe
 
 stringName=`echo $stringName | tr $smallA $cypherSmall`
 stringName=`echo $stringName | tr $bigA $cypherBig`
-`` 
+```
 - semua perintah ini adalah perintah yang digunakan untuk mengubah huruf aslinya menjadi huruf baru dan menyesuaikan dengan huruf aslinya, jika huruf aslinya menggunakan kapital, maka setelah dienkripsi, hasil enkripsinya juga berupa huruf kapital tetapi alphabetnya berbeda
 - ``mv $fileName $stringName.txt`` adalah perintah untuk mengganti nama file yang tadi dipanggil kemudian diubah dengan menggunakan nama hasil enkripsi
 
