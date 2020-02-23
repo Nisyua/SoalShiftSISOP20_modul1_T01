@@ -105,6 +105,7 @@ Program tersebut berfungsi menyaring judul hanya dengan alphabet. Ketika menjala
 ``bash coba2b.sh iniargumen123`` , maka otomats akan muncul sebuah file txt berupa iniargumen.txt dimana akan menyaring numericnya dan menyisakan alphabet saja.
 
 **2c**
+
 Mengenkripsi nama file .txt agat tidak mudah diketahui menggunakan konversi huruf (string manipulation) yang disesuaikan dengan jam (0-23).
 ```#!/bin/bash
 fileName=$1
