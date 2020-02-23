@@ -104,8 +104,8 @@ head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $judul.txt
 Program tersebut berfungsi menyaring judul hanya dengan alphabet. Ketika menjalankan program tersebut, perlu diberi tambahan argumen. jadi 
 ``bash coba2b.sh iniargumen123`` , maka otomats akan muncul sebuah file txt berupa iniargumen.txt dimana akan menyaring numericnya dan menyisakan alphabet saja.
 
-##2c##
-mengenkripsi nama file .txt agat tidak mudah diketahui menggunakan konversi huruf (string manipulation) yang disesuaikan dengan jam (0-23).
+**2c**
+Mengenkripsi nama file .txt agat tidak mudah diketahui menggunakan konversi huruf (string manipulation) yang disesuaikan dengan jam (0-23).
 ```#!/bin/bash
 fileName=$1
 varHour=`date +"%H"`
@@ -125,8 +125,8 @@ stringName=`echo $stringName | tr $bigA $cypherBig`
 
 mv $fileName $stringName.txt
 ```
-program diatas berfungsi untuk mengubah nama file yang dipanggil saat dijalankan dengan cara ``bash soal2_enkripsi.sh iniargumen.txt``
-``varHour=`date +"%H"`` adalah perintah untuk mendapatkan nilai jam pada pembuatan file yang nantinya akan dipanggil untuk proses enkripsi
+Program diatas berfungsi untuk mengubah nama file yang dipanggil saat dijalankan dengan cara ``bash soal2_enkripsi.sh iniargumen.txt``
+- ``varHour=`date +"%H"`` adalah perintah untuk mendapatkan nilai jam pada pembuatan file yang nantinya akan dipanggil untuk proses enkripsi
 ``smallA=$(echo {a..z} | sed -r 's/ //g';)
 bigA=$(echo {A..Z} | sed -r 's/ //g';)
 cypherSmall=`echo $smallA | sed -r "s/^.{$varHour}//g";echo $smallA | sed -r "s/.{$( expr 26 - $varHour )}$//g"`
@@ -138,8 +138,8 @@ echo -e $smallA \n $bigA \n $cypherSmall \n $cypherSmall \n $cypherBig \n $cyphe
 stringName=`echo $stringName | tr $smallA $cypherSmall`
 stringName=`echo $stringName | tr $bigA $cypherBig`
 `` 
-semua perintah ini adalah perintah yang digunakan untuk mengubah huruf aslinya menjadi huruf baru dan menyesuaikan dengan huruf aslinya, jika huruf aslinya menggunakan kapital, maka setelah dienkripsi, hasil enkripsinya juga berupa huruf kapital tetapi alphabetnya berbeda
-``mv $fileName $stringName.txt`` adalah perintah untuk mengganti nama file yang tadi dipanggil kemudian diubah dengan menggunakan nama hasil enkripsi
+- semua perintah ini adalah perintah yang digunakan untuk mengubah huruf aslinya menjadi huruf baru dan menyesuaikan dengan huruf aslinya, jika huruf aslinya menggunakan kapital, maka setelah dienkripsi, hasil enkripsinya juga berupa huruf kapital tetapi alphabetnya berbeda
+- ``mv $fileName $stringName.txt`` adalah perintah untuk mengganti nama file yang tadi dipanggil kemudian diubah dengan menggunakan nama hasil enkripsi
 
 # Nomor 3
 
