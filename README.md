@@ -93,6 +93,8 @@ Lalu ketik jalankan file bash tersebut ``bash coba2a.sh`` setelah itu inputkan a
 `soal2 `= argumen yang diinputkan. 
 Setelah itu buka file `soal2.txt` maka akan mendapat passwordnya. 
 
+![](img/coba2a.png)
+
 **2b** 
 
 membuat file baru lagi yang hanya beda pada **$judul** nya 
