@@ -93,6 +93,7 @@ Lalu ketik jalankan file bash tersebut ``bash coba2a.sh`` setelah itu inputkan a
 `soal2 `= argumen yang diinputkan. 
 Setelah itu buka file `soal2.txt` maka akan mendapat passwordnya. 
 
+![](img/soal2.png)
 ![](img/coba2a.png)
 
 **2b** 
@@ -105,6 +106,8 @@ head /dev/urandom | tr -dc A-Za-z0-9 | head -c 28 > $judul.txt
 ```
 Program tersebut berfungsi menyaring judul hanya dengan alphabet. Ketika menjalankan program tersebut, perlu diberi tambahan argumen. jadi 
 ``bash coba2b.sh iniargumen123`` , maka otomats akan muncul sebuah file txt berupa iniargumen.txt dimana akan menyaring numericnya dan menyisakan alphabet saja.
+
+
 
 **2c**
 
